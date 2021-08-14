@@ -15,6 +15,6 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         # 部署分支
         TARGET_BRANCH: host-pages
-        BUILD_SCRIPT: yarn config set registry http://registry.npm.taobao.org/ && yarn && yarn build
+        BUILD_SCRIPT: yarn config set registry http://registry.npm.taobao.org/ && yarn global add node-gyp && yarn && yarn build
         # 打包输出目录
         BUILD_DIR: dist
